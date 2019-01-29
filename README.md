@@ -17,8 +17,11 @@
     "react-navigation": "^1.0.0"
   },
 
-This project is tentative. 
-### package.json added
+### This project is tentative.
+    please add your own google-services.json file in app level directory
+    https://firebase.google.com/docs/android/setup
+
+
 
 # Screenshots:
 ![Firebase console](./screenshots/firebase_console.png)
