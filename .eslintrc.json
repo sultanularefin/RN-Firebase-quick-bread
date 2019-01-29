@@ -1,0 +1,66 @@
+{
+  "root": true,
+
+  "parser": "babel-eslint",
+
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true,
+    "react-native/react-native": true
+  },
+  "extends": ["eslint:recommended","strongloop",
+    "plugin:react/recommended", "plugin:jsx-a11y/recommended","react-native","plugin:react-native/all"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2015
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "react-native"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+      // default to "createReactClass"
+      "pragma": "React",  // Pragma to use, default to "React"
+      "version": "15.0", // React version, default to the latest React stable release
+      "flowVersion": "0.53" // Flow version
+    },
+    "propWrapperFunctions": [ "forbidExtraProps" ] // The names of any functions used to wrap the
+    // propTypes object, e.g. `forbidExtraProps`.
+    // If this isn't set, any propTypes wrapped in
+    // a function will be skipped.
+  },
+  "rules": {
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": 0,
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "no-use-before-define": [0, { "functions": true, "classes": true }],
+    "react-native/no-inline-styles": 0,
+    //"react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 0,
+    //"react-native/no-color-literals": 2,
+    "global-require":0,
+    "no-mixed-requires":0,
+    "no-console": 0,
+    "no-unused-vars": [1, {"vars": "all", "args": "none"}], // disallow declaration of variables that are not used in the code
+    "no-undefined": 1,               // disallow use of undefined variable (off by default)
+    "no-undef-init": 1,              // disallow use of undefined when initializing variables
+    "no-var":1,                      // 0 means "allow" , 1 means "warning" 2 means "error"
+    "no-invalid-this": 1,
+    "prefer-const": 1
+  }
+}
